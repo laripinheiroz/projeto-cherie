@@ -69,9 +69,16 @@ body{
   padding: 0 16px; 
 }
 
-.site-header{ 
-  margin-bottom: 20px; 
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 20px;
+  background: rgba(245, 245, 240, 0.92); 
+  backdrop-filter: blur(10px);            
+  -webkit-backdrop-filter: blur(10px);    
 }
+
 
 .header-inner{
   display:flex;
@@ -158,6 +165,8 @@ body{
   font-size: clamp(1.2rem, 2.0vw, 1.6rem); 
   letter-spacing: 0.2px;
 }
+
+
 
 @media (max-width:1000px) {
 
@@ -499,4 +508,8 @@ footer {
   .menu ul{ gap:8px; }
   .menu a{ font-size:0.9rem; padding:6px 8px; }
   .brands-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+section{
+  scroll-margin-top: 90px; 
 }
